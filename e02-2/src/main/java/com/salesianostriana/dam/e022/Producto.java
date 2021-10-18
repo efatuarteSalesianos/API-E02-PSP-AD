@@ -2,7 +2,6 @@ package com.salesianostriana.dam.e022;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Table;
 
 import javax.persistence.*;
 
