@@ -1,13 +1,16 @@
 package com.salesianostriana.dam.e022;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
-@Data
-@NoArgsConstructor
+@Builder
+@NoArgsConstructor @AllArgsConstructor
+@ToString
 @Table(name = "product")
 public class Producto {
     @Id
@@ -20,5 +23,9 @@ public class Producto {
     @Column(name = "price", nullable = false)
     private float precio;
 
-    private String imagen, descripcion;
+    @Column(name = "image")
+    private String imagen;
+
+    @Column(name = "description")
+    private String descripcion;
 }
